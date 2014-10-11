@@ -19,6 +19,11 @@ Go to Settings -> Create -> Apps
 
 Click 'New' under **Connected Apps**
 
+- Enable Oauth
+- Setup redirect URI, like: https://localhost:9000/oauth/callback
+- Choose Oauth scopes
+- Save
+- Now copy CONSUMER KEY (aka Client Id) and CONSUMER SECRET
 
 
 

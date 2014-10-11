@@ -1,8 +1,5 @@
 var nforce = require('nforce');
 
-//console.log(process.env['SF_OAUTH_CLIENT_ID']);
-//console.log(process.env['SF_OAUTH_CLIENT_SECRET']);
-
 var org = nforce.createConnection({
   clientId: process.env['SF_OAUTH_CLIENT_ID'],
   clientSecret: process.env['SF_OAUTH_CLIENT_SECRET'],
