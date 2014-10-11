@@ -8,7 +8,9 @@ var org = nforce.createConnection({
   mode: 'single'
 });
 
-org.authenticate({ username: process.env.SF_USERNAME, password: process.env.SF_PASSWORD + process.env.SF_TOKEN}, function(err, resp){
+org.authenticate({ username: process.env.SF_USERNAME, 
+	               password: process.env.SF_PASSWORD + process.env.SF_TOKEN}, 
+  function(err, resp){
     if (err) {
     	console.log(err);
     } else {
@@ -16,16 +18,16 @@ org.authenticate({ username: process.env.SF_USERNAME, password: process.env.SF_P
     		console.log("----------- CUSTOM OBJECTS ----------- ")
     		resp.sobjects.forEach(function(rec) {
     			if (rec.name.endsWith('__c')) {
-    				console.log(rec.name);
+    				//console.log(rec.name);
     			}
     		});
     	});
 
-    	org.query({ query: demoQ /*'select Id, Name, AccountNumber from Account limit 30'*/ }, function(err, resp){
+    	org.query({ query: 'select Id, Name, AccountNumber from Account limit 30' }, function(err, resp){
 			if(!err && resp.records) {
 	    		resp.records.forEach(function(account) {
-	        	//console.log(account.get('Name'));
-	        	console.log(account._fields);
+	        	console.log(account.get('Name'));
+	        	//console.log(account._fields);
 	    		});
 			} else {
 				console.log(err);

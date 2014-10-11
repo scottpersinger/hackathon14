@@ -44,6 +44,10 @@ or
 
 https://github.com/ejholmes/restforce
 
+## Contact
+
+scottp@heroku.com
+
 
 
 

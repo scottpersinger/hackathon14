@@ -8,9 +8,9 @@ client = Restforce.new :username => ENV['SF_USERNAME'],
 
 accounts = client.query("select Id, Name, AccountNumber from Account limit 30")
 
-accounts.each do |account|
-	puts account.Name
-end
+#accounts.each do |account|
+#	puts account.Name
+#end
 
-#notes = client.query("select Id, Notes__c, Sentiment__c from Meeting_Note__c")
-#notes.each {|n| puts n.inspect}
+notes = client.query("select Id, Notes__c, Sentiment__c from Meeting_Note__c")
+notes.each {|n| puts n.inspect}
