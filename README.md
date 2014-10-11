@@ -23,7 +23,27 @@ Click 'New' under **Connected Apps**
 - Setup redirect URI, like: https://localhost:9000/oauth/callback
 - Choose Oauth scopes
 - Save
-- Now copy CONSUMER KEY (aka Client Id) and CONSUMER SECRET
+
+
+Now copy CONSUMER KEY (aka Client Id) and CONSUMER SECRET into your app.
+
+Login with:
+
+- SF username
+- Password
+- Security Token
+- Consumer Key
+- Consumer Secret
+- Redirect URI
+
+For per-user authentication look into Salesforce Oauth flow:
+
+https://github.com/kevinohara80/nforce
+
+or
+
+https://github.com/ejholmes/restforce
+
 
 
 
