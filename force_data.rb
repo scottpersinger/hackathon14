@@ -12,4 +12,5 @@ accounts.each do |account|
 	puts account.Name
 end
 
-
+notes = client.query("select Id, Notes__c, Sentiment__c from Meeting_Note__c")
+notes.each {|n| puts n.inspect}
