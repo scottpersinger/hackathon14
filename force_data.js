@@ -1,9 +1,12 @@
 var nforce = require('nforce');
 
+//console.log(process.env['SF_OAUTH_CLIENT_ID']);
+//console.log(process.env['SF_OAUTH_CLIENT_SECRET']);
+
 var org = nforce.createConnection({
   clientId: process.env['SF_OAUTH_CLIENT_ID'],
   clientSecret: process.env['SF_OAUTH_CLIENT_SECRET'],
-  redirectUri: 'http://localhost:3000/oauth/_callback',
+  redirectUri: 'https://localhost:9000/oauth/callback',
   environment: 'production',
   mode: 'single'
 });
